@@ -1,0 +1,12 @@
+Package: POLAr
+Type: Package
+Title: Some tools to read data from Polar watch files.
+Version: 0.6
+Date: 2016-12-23
+Author: Athanasios Natsis
+Copyright: 2016 Athanasios Natsis
+Maintainer: Natsis Athanasios <natsisthanasis@gmail.com>
+Description: It can parse pdd exercise files and user ppd file. Also can aggregate some data by time span.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.1.1
