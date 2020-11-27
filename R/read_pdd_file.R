@@ -1,184 +1,185 @@
 
-columnnames  = c("date",
-                "exercise_nbr",
-                "resting_HR",
-                "orth_test_HR",
-                "weigth",
-                "sleep_hour",
+## names for the columns of the output
+columnnames <- c("date",
+                 "exercise_nbr",
+                 "resting_HR",
+                 "orth_test_HR",
+                 "weigth",
+                 "sleep_hour",
 
-                # "row 2" #
-                "sleep_pat",
+                 # "row 2" #
+                 "sleep_pat",
 
-                # "row 3" #
-                "day_idata",
-                # reserved
-                "pl_HRmaxp",
-                "ovrtrain_tst",
-                "fat_perc",
-                # reserved
+                 # "row 3" #
+                 "day_idata",
+                 # reserved
+                 "pl_HRmaxp",
+                 "ovrtrain_tst",
+                 "fat_perc",
+                 # reserved
 
-                # "row 4" #
-                # reserved
-                # reserved
-                "pl_ownindex",
-                "weather",
-                "temperature",
-                # reserved
+                 # "row 4" #
+                 # reserved
+                 # reserved
+                 "pl_ownindex",
+                 "weather",
+                 "temperature",
+                 # reserved
 
-                # "row 5" #
-                # reserved   = day_info[7,1]
-                # reserved   = day_info[7,2]
-                "plans_nbr",
-                # reserved   = day_info[7,4]
-                # reserved   = day_info[7,5]
-                # reserved   = day_info[7,6])
+                 # "row 5" #
+                 # reserved   = day_info[7,1]
+                 # reserved   = day_info[7,2]
+                 "plans_nbr",
+                 # reserved   = day_info[7,4]
+                 # reserved   = day_info[7,5]
+                 # reserved   = day_info[7,6])
 
-                "no_report",
-                "no_manual",
-                "dist_prod",
-                "start_time",
-                "total_time",
+                 "no_report",
+                 "no_manual",
+                 "dist_prod",
+                 "start_time",
+                 "total_time",
 
-                # "row 2" #
-                "sport_id",
-                "distanse_old",
-                "feeling",
-                "recovery",
-                # reserved     = day_info[ex+3,5]
-                "energy_cons",
+                 # "row 2" #
+                 "sport_id",
+                 "distanse_old",
+                 "feeling",
+                 "recovery",
+                 # reserved     = day_info[ex+3,5]
+                 "energy_cons",
 
-                # "row 3" #
-                "distance",
-                # reserved     = day_info[ex+4,2]
-                # reserved     = day_info[ex+4,3]
-                # reserved     = day_info[ex+4,4]
-                "odometer",
-                "ascent",
+                 # "row 3" #
+                 "distance",
+                 # reserved     = day_info[ex+4,2]
+                 # reserved     = day_info[ex+4,3]
+                 # reserved     = day_info[ex+4,4]
+                 "odometer",
+                 "ascent",
 
-                # "row 4" #
-                "tl_exertion",
-                "pw_avg_wt_ze",
-                "ver_speed_up",
-                "ver_speed_dn",
-                # reserved     = day_info[ex+5,5]
-                "ver_spd_up_avg",
+                 # "row 4" #
+                 "tl_exertion",
+                 "pw_avg_wt_ze",
+                 "ver_speed_up",
+                 "ver_speed_dn",
+                 # reserved     = day_info[ex+5,5]
+                 "ver_spd_up_avg",
 
-                # "row 5" #
-                "zone_0_time",
-                "zone_1_time",
-                "zone_2_time",
-                "zone_3_time",
-                "zone_4_time",
-                "zone_5_time",
+                 # "row 5" #
+                 "zone_0_time",
+                 "zone_1_time",
+                 "zone_2_time",
+                 "zone_3_time",
+                 "zone_4_time",
+                 "zone_5_time",
 
-                # "row 6" #
-                "zone_6_time",
-                "zone_7_time",
-                "zone_8_time",
-                "zone_9_time",
-                "sport_unit",
-                # reserved     = day_info[ex+7,6]
+                 # "row 6" #
+                 "zone_6_time",
+                 "zone_7_time",
+                 "zone_8_time",
+                 "zone_9_time",
+                 "sport_unit",
+                 # reserved     = day_info[ex+7,6]
 
-                # "row 7" #
-                "zone_0_exert",
-                "zone_1_exert",
-                "zone_2_exert",
-                "zone_3_exert",
-                "zone_4_exert",
-                "zone_5_exert",
+                 # "row 7" #
+                 "zone_0_exert",
+                 "zone_1_exert",
+                 "zone_2_exert",
+                 "zone_3_exert",
+                 "zone_4_exert",
+                 "zone_5_exert",
 
-                # "row 8" #
-                "zone_6_exert",
-                "zone_7_exert",
-                "zone_8_exert",
-                "zone_9_exert",
-                "record_rate",
-                "original_ascen",
+                 # "row 8" #
+                 "zone_6_exert",
+                 "zone_7_exert",
+                 "zone_8_exert",
+                 "zone_9_exert",
+                 "record_rate",
+                 "original_ascen",
 
-                # "row 9" #
-                "HR_average",
-                "HR_max",
-                "speed_averg",
-                "speed_max",
-                "cadence_avrg",
-                "cadence_max",
+                 # "row 9" #
+                 "HR_average",
+                 "HR_max",
+                 "speed_averg",
+                 "speed_max",
+                 "cadence_avrg",
+                 "cadence_max",
 
-                # "row 10" #
-                "alti_averg",
-                "alti_max",
-                "power_averg",
-                "power_max",
-                "pedal_indx_avr",
-                "pedal_indx_max",
+                 # "row 10" #
+                 "alti_averg",
+                 "alti_max",
+                 "power_averg",
+                 "power_max",
+                 "pedal_indx_avr",
+                 "pedal_indx_max",
 
-                # "row 11" #
-                # reserved     = day_info[ex+12,1]
-                # reserved     = day_info[ex+12,2]
-                # reserved     = day_info[ex+12,3]
-                # reserved     = day_info[ex+12,4]
-                "slope_count",
-                "descent",
+                 # "row 11" #
+                 # reserved     = day_info[ex+12,1]
+                 # reserved     = day_info[ex+12,2]
+                 # reserved     = day_info[ex+12,3]
+                 # reserved     = day_info[ex+12,4]
+                 "slope_count",
+                 "descent",
 
-                # "row 12" #
-                "avg_calory_rat",
-                "ver_spd_dn_avg",
-                "beat_sum",
-                "L_R_balan_avg",
-                "L_R_balan_max",
-                "original_energy",
+                 # "row 12" #
+                 "avg_calory_rat",
+                 "ver_spd_dn_avg",
+                 "beat_sum",
+                 "L_R_balan_avg",
+                 "L_R_balan_max",
+                 "original_energy",
 
-                # "row 13" #
-                "power_zone_0_ti",
-                "power_zone_1_ti",
-                "power_zone_2_ti",
-                "power_zone_3_ti",
-                "power_zone_4_ti",
-                "power_zone_5_ti",
+                 # "row 13" #
+                 "power_zone_0_ti",
+                 "power_zone_1_ti",
+                 "power_zone_2_ti",
+                 "power_zone_3_ti",
+                 "power_zone_4_ti",
+                 "power_zone_5_ti",
 
-                # "row 14" #
-                "power_zone_6_ti",
-                "power_zone_7_ti",
-                "power_zone_8_ti",
-                "power_zone_9_ti",
-                # reserved     = day_info[ex+14,5]
-                # reserved     = day_info[ex+14,6]
+                 # "row 14" #
+                 "power_zone_6_ti",
+                 "power_zone_7_ti",
+                 "power_zone_8_ti",
+                 "power_zone_9_ti",
+                 # reserved     = day_info[ex+14,5]
+                 # reserved     = day_info[ex+14,6]
 
-                # "row 15" #
-                "ascent_hourly",
-                "exerc_rank",
-                "memor_full",
-                "running_index",
-                # reserved     = day_info[ex+15,5]
-                "incline_max",
+                 # "row 15" #
+                 "ascent_hourly",
+                 "exerc_rank",
+                 "memor_full",
+                 "running_index",
+                 # reserved     = day_info[ex+15,5]
+                 "incline_max",
 
-                # "row 16" #
-                "stride_len_avg",
-                "decline_max",
-                "cycle_efficienc",
-                "footpod_calibr",
-                "wheel_size",
-                # reserved     = day_info[ex+16,6]
+                 # "row 16" #
+                 "stride_len_avg",
+                 "decline_max",
+                 "cycle_efficienc",
+                 "footpod_calibr",
+                 "wheel_size",
+                 # reserved     = day_info[ex+16,6]
 
-                # "row 17" #
-                "exercise_type",
-                # reserved     = day_info[ex+17,2]
-                # reserved     = day_info[ex+17,3]
-                # reserved     = day_info[ex+17,4]
-                # reserved     = day_info[ex+17,5]
-                # reserved     = day_info[ex+17,6]
+                 # "row 17" #
+                 "exercise_type",
+                 # reserved     = day_info[ex+17,2]
+                 # reserved     = day_info[ex+17,3]
+                 # reserved     = day_info[ex+17,4]
+                 # reserved     = day_info[ex+17,5]
+                 # reserved     = day_info[ex+17,6]
 
-                # "row 18-24" #
+                 # "row 18-24" #
 
-                # "row 25-34" #
-                "exercise_name",
-                "exercise_notes",
-                "hrm_filename",
-                "hyperlink",
-                "hyperlink_info",
-                "gps_file",
-                "RR_file",
-                "previus_file",
-                "next_file"
+                 # "row 25-34" #
+                 "exercise_name",
+                 "exercise_notes",
+                 "hrm_filename",
+                 "hyperlink",
+                 "hyperlink_info",
+                 "gps_file",
+                 "RR_file",
+                 "previus_file",
+                 "next_file"
 )
 
 
@@ -205,73 +206,74 @@ read_pdd_file <- function(pddfile) {
     # read day info -----------------------------------------------------------
 
     # "row 1" #
-    date         = day_info[3,1]                    # yyyymmdd
-    exercise_nbr = as.numeric(day_info[3,2])
-    resting_HR   = day_info[3,3]                    # bpm
-    orth_test_HR = day_info[3,4]                    # bpm
-    weigth       = as.numeric(day_info[3,5])/100    # kg
-    sleep_hour   = day_info[3,6]                    # sec
+    date         <- day_info[3,1]                    # yyyymmdd
+    exercise_nbr <- as.numeric(day_info[3,2])
+    resting_HR   <- day_info[3,3]                    # bpm
+    orth_test_HR <- day_info[3,4]                    # bpm
+    weigth       <- as.numeric(day_info[3,5])/100    # kg
+    sleep_hour   <- day_info[3,6]                    # sec
 
     # "row 2" #
-    sleep_pat    = day_info[4,1]                    # categorical
+    sleep_pat    <- day_info[4,1]                    # categorical
 
     # "row 3" #
-    day_idata    = day_info[5,1]                    # categorical
-    # reserved   = day_info[5,2]
-    pl_HRmaxp    = day_info[5,3]                    # bpm
-    ovrtrain_tst = day_info[5,4]                    # state * 10000 + index * 100
-    fat_perc     = as.numeric(day_info[5,5])/10     # fat%
-    # reserved   = day_info[5,6]                    # user value
+    day_idata    <- day_info[5,1]                    # categorical
+    # reserved   <- day_info[5,2]
+    pl_HRmaxp    <- day_info[5,3]                    # bpm
+    ovrtrain_tst <- day_info[5,4]                    # state * 10000 + index * 100
+    fat_perc     <- as.numeric(day_info[5,5])/10     # fat%
+    # reserved   <- day_info[5,6]                    # user value
 
     # "row 4" #
-    # reserved   = day_info[6,1]                    # user value
-    # reserved   = day_info[6,2]
-    pl_ownindex  = day_info[6,3]                    # index
-    weather      = day_info[6,4]                    # categorical
-    temperature  = as.numeric(day_info[6,5])/10     # celsius
-    # reserved   = day_info[6,6]
+    # reserved   <- day_info[6,1]                    # user value
+    # reserved   <- day_info[6,2]
+    pl_ownindex  <- day_info[6,3]                    # index
+    weather      <- day_info[6,4]                    # categorical
+    temperature  <- as.numeric(day_info[6,5])/10     # celsius
+    # reserved   <- day_info[6,6]
 
     # "row 5" #
-    # reserved   = day_info[7,1]
-    # reserved   = day_info[7,2]
-    plans_nbr    = day_info[7,3]
-    # reserved   = day_info[7,4]
-    # reserved   = day_info[7,5]
-    # reserved   = day_info[7,6]
+    # reserved   <- day_info[7,1]
+    # reserved   <- day_info[7,2]
+    plans_nbr    <- day_info[7,3]
+    # reserved   <- day_info[7,4]
+    # reserved   <- day_info[7,5]
+    # reserved   <- day_info[7,6]
 
-    day_vector   = c(date,
-                     exercise_nbr,
-                     resting_HR,
-                     orth_test_HR,
-                     weigth,
-                     sleep_hour,
+    ## info for the day
+    day_vector   <- c(date,
+                      exercise_nbr,
+                      resting_HR,
+                      orth_test_HR,
+                      weigth,
+                      sleep_hour,
 
-                     # "row 2" #
-                     sleep_pat,
+                      # "row 2" #
+                      sleep_pat,
 
-                     # "row 3" #
-                     day_idata,
-                     # reserved
-                     pl_HRmaxp,
-                     ovrtrain_tst,
-                     fat_perc,
-                     # reserved
+                      # "row 3" #
+                      day_idata,
+                      # reserved
+                      pl_HRmaxp,
+                      ovrtrain_tst,
+                      fat_perc,
+                      # reserved
 
-                     # "row 4" #
-                     # reserved
-                     # reserved
-                     pl_ownindex,
-                     weather,
-                     temperature,
-                     # reserved
+                      # "row 4" #
+                      # reserved
+                      # reserved
+                      pl_ownindex,
+                      weather,
+                      temperature,
+                      # reserved
 
-                     # "row 5" #
-                     # reserved   = day_info[7,1]
-                     # reserved   = day_info[7,2]
-                     plans_nbr
-                     # reserved   = day_info[7,4]
-                     # reserved   = day_info[7,5]
-                     # reserved   = day_info[7,6]
+                      # "row 5" #
+                      # reserved   = day_info[7,1]
+                      # reserved   = day_info[7,2]
+                      plans_nbr
+                      # reserved   = day_info[7,4]
+                      # reserved   = day_info[7,5]
+                      # reserved   = day_info[7,6]
     )
 
 
@@ -279,13 +281,13 @@ read_pdd_file <- function(pddfile) {
     # loop all exercises in a day ---------------------------------------------
 
     # find rows for all exercise info
-    exer_indx = which(apply(day_info, 1, function(x) any(grepl("ExerciseInfo", x))))
-    gather = data.frame(matrix(NA, nrow = 1, ncol = 106))
+    exer_indx <- which(apply(day_info, 1, function(x) any(grepl("ExerciseInfo", x))))
+    gather    <- data.frame(matrix(NA, nrow = 1, ncol = 106))
     # gather = data.frame()
 
     for (ex in exer_indx){
 
-        # read infos for an exercise ----------------------------------------------
+        # read info for an exercise ----------------------------------------------
 
         # "row 1" #
         # reserved      = day_info[ex + 2, 1]
@@ -597,9 +599,4 @@ read_pdd_file <- function(pddfile) {
     ## return data
     return(gather)
 }
-
-# pddfile = "/home/athan/Documents/Running/Polar/Athan/2016/20161220.pdd"
-# pddfile = "/home/athan/Documents/Running/Polar/Athan_old/2012/20120816.pdd"
-
-# gathered <- read_pdd_file( pddfile )
 
