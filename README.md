@@ -16,3 +16,6 @@ It will be nice if it could be expanded to be able to read heart rate files `.hr
 
 Still I haven't found a way to convert Polar data (`.gpx` and `.hrm`) to other formats like `.tcx`.
 If you have any suggestion I would love to hear it.
+
+<!--dfsf-->
+
