@@ -3,9 +3,9 @@
 
 Some tools to read data from Polar watch files.
 
-It can parse `.pdd` exercise files and user the `.ppd` file.
+It can parse `.pdd` exercise files and user the user `.ppd` file.
 
-Also can aggregate some data by time span.
+Also can aggregate some data by time span. Probably data.table is better for than.
 
 It was written many years ago and my R coding style was very raw.
 Although, I still use it as intended, as I keep all my data and in that old format.
