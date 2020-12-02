@@ -1,7 +1,7 @@
 
 # POLAr
 
-Some R language functions to read data from Polar watch files.
+A package for R language with some functions to read data from Polar watch files.
 
 It can parse `.pdd` exercise files and user the user `.ppd` file.
 
