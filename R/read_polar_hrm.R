@@ -34,28 +34,28 @@ head(file_data,n=25)
 
 # read [Parms] ------------------------------------------------------------
 
-version     <- get_value(file_data,"Version=")
-monitor     <- get_value(file_data,"Monitor=")
-smode       <- get_value(file_data,"SMode=")
-date        <- get_value(file_data,"Date=")
-starttime   <- get_value(file_data,"StartTime=")
-length      <- get_value(file_data,"Length=")
-interval    <- get_value(file_data,"Interval=")
-upper1      <- get_value(file_data,"Upper1=")
-upper2      <- get_value(file_data,"Upper2=")
-upper3      <- get_value(file_data,"Upper3=")
-lower1      <- get_value(file_data,"Lower1=")
-lower2      <- get_value(file_data,"Lower2=")
-lower3      <- get_value(file_data,"Lower3=")
-timer1      <- get_value(file_data,"Timer1=")
-timer2      <- get_value(file_data,"Timer2=")
-timer3      <- get_value(file_data,"Timer3=")
-activelimit <- get_value(file_data,"ActiveLimit=")
-maxHR       <- get_value(file_data,"MaxHR=")
-restHR      <- get_value(file_data,"RestHR=")
-startdelay  <- get_value(file_data,"StartDelay=")
-vo2max      <- get_value(file_data,"VO2max=")
-weight      <- get_value(file_data,"Weight=")
+version     <- get_value(file_data, "Version="     )
+monitor     <- get_value(file_data, "Monitor="     )
+smode       <- get_value(file_data, "SMode="       )
+date        <- get_value(file_data, "Date="        )
+starttime   <- get_value(file_data, "StartTime="   )
+length      <- get_value(file_data, "Length="      )
+interval    <- get_value(file_data, "Interval="    )
+upper1      <- get_value(file_data, "Upper1="      )
+upper2      <- get_value(file_data, "Upper2="      )
+upper3      <- get_value(file_data, "Upper3="      )
+lower1      <- get_value(file_data, "Lower1="      )
+lower2      <- get_value(file_data, "Lower2="      )
+lower3      <- get_value(file_data, "Lower3="      )
+timer1      <- get_value(file_data, "Timer1="      )
+timer2      <- get_value(file_data, "Timer2="      )
+timer3      <- get_value(file_data, "Timer3="      )
+activelimit <- get_value(file_data, "ActiveLimit=" )
+maxHR       <- get_value(file_data, "MaxHR="       )
+restHR      <- get_value(file_data, "RestHR="      )
+startdelay  <- get_value(file_data, "StartDelay="  )
+vo2max      <- get_value(file_data, "VO2max="      )
+weight      <- get_value(file_data, "Weight="      )
 
 
 params_vector <- c(version,
@@ -81,7 +81,7 @@ params_vector <- c(version,
                    vo2max,
                    weight)
 
-# sanity chech
+# sanity check
 if ( version == 106 ){
     print("expected version")
 } else {
@@ -95,7 +95,7 @@ first.index <- which(file_data=="[Note]")+1
 last.index  <- which(file_data=="[IntTimes]")-1
 span        <- last.index-first.index
 if ( span >= 2 ){
-  print("somthin there")
+  print("get notes")
   notes <- paste(file_data[first.index:last.index])
   print(notes)
 }
@@ -105,21 +105,21 @@ if ( span >= 2 ){
 # read file again to get tables -------------------------------------------
 
 
-first.index <- which(file_data=="[IntTimes]")+1
-file_data2  <- read.table(file=hrms_files[1],
-                          fill=TRUE,
-                          skip=first.index,
-                          strip.white=FALSE,
-                          stringsAsFactors=FALSE,
-                          blank.lines.skip=FALSE,
-                          fileEncoding="ISO8859-7")
+first.index <- which( file_data == "[IntTimes]" ) + 1
+file_data2  <- read.table(file = hrms_files[1],
+                          fill = TRUE,
+                          skip = first.index,
+                          strip.white = FALSE,
+                          stringsAsFactors = FALSE,
+                          blank.lines.skip = FALSE,
+                          fileEncoding = "ISO8859-7")
 
 get_atable <- function (file_data2,from,to) {
-    first.index=which(file_data2==from)
-    last.index=which(file_data2==to)-2
-    span=last.index-first.index
+    first.index <- which(file_data2 == from)
+    last.index  <- which(file_data2 == to) - 2
+    span        <- last.index - first.index
 
-    if (span>=2){
+    if ( span >= 2 ){
         print(from)
         file_data2[first.index:last.index,]
     }
@@ -127,9 +127,9 @@ get_atable <- function (file_data2,from,to) {
 
 
 get_alist <- function (file_data,from,to) {
-  first.index=which(file_data==from)
-  last.index=which(file_data==to)-1
-  span=last.index-first.index
+  first.index <- which(file_data==from)
+  last.index  <- which(file_data==to)-1
+  span        <- last.index-first.index
 
     if ( span >= 2 ){
       print(from)
