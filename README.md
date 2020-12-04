@@ -18,5 +18,3 @@ Some work have been done already in `read_polar_hrm.R`.
 Still I haven't found an existing way to combine Polar data (`.gpx` and `.hrm`) to other formats like `.tcx`.
 If you have any suggestion I would love to hear it.
 
-<!--dfsf-->
-

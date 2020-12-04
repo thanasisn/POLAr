@@ -1,5 +1,4 @@
 
-rm(list=ls())
 
 #### functions ####
 get_value <- function (file_data,apattern) {

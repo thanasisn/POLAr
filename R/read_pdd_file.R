@@ -587,9 +587,9 @@ read_pdd_file <- function(pddfile) {
 
 
         # prepare line for df
-        arecord = c(day_vector, exercise_vector)
-        output  = c(arecord[1], as.numeric(arecord[2:97]), arecord[98:length(arecord)])
-        gather  = rbind( gather, output)
+    arecord <- c(day_vector, exercise_vector)
+    output  <- c(arecord[1], as.numeric(arecord[2:97]), arecord[98:length(arecord)])
+    gather  <- rbind( gather, output)
 
     }
     ## display some process info

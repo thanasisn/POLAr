@@ -1,6 +1,6 @@
 Package: POLAr
 Type: Package
-Title: Some tools to read data from Polar watch files.
+Title: Some tools to read data from Polar watch files
 Version: 0.7
 Date: 2016-12-23
 Author: Athanasios Natsis
