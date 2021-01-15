@@ -19,3 +19,5 @@ Still I haven't found an existing way to combine Polar data (`.gpx` and `.hrm`) 
 If you have any suggestion on this, I would love to hear it.
 
 *Suggestions and improvements are always welcome.*
+
+*I use those regular, but they have their quirks, may broke and maybe superseded by other tools.*
