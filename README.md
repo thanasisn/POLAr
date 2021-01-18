@@ -2,13 +2,16 @@
 # POLAr
 
 A package for R language with some functions to read data from Polar watch files.
+Parses files used by "Polar Pro Trainer" software.
 
-It can parse `.pdd` exercise files and user the user `.ppd` file.
+Things can do:
+- Parse `.pdd` exercise files
+- Read the user file `.ppd`
 
-Also can aggregate some data by time span. Probably data.table is better for that, I do not need to use these functions anymore.
+Also can aggregate some data by time span. Probably `data.table` is better for that, I do not need to use these functions anymore.
 
-It was written many years ago and my R coding style was very poor and ineffective.
-Although, I still use it as intended, as I keep all my data and in that old format.
+It was written many years ago and my R coding style was very poor and inefficient.
+Although, I still use it as intended, as I still keep my data in that old format.
 
 ## Request
 
