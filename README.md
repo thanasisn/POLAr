@@ -1,7 +1,6 @@
 
 # POLAr
 
-test
 
 A package for R language with some functions to read data from Polar watch files.
 Parses files used by "Polar Pro Trainer" software.
